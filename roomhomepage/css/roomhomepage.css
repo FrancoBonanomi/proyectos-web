@@ -1,0 +1,288 @@
+
+:root{
+--Dark-Gray: hsl(0, 0%, 63%);
+--Black: hsl(0, 0%, 0%);
+--White: hsl(0, 0%, 100%);
+--Very-Dark-Gray: hsl(0, 0%, 27%);
+
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas: "primera"
+                        "segunda"
+                        "tercera"
+                        "cuarta"
+                        "quinta";
+    margin: 0 auto;
+    max-width: 1440px;
+
+}
+
+
+.seccion1{
+    min-height: 400px;
+    background-image: url(../images14/mobile-image-hero-1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 2.5em 0;
+    position: relative;
+    grid-area: primera;
+    overflow: hidden;
+    background-size: cover;
+}
+
+
+
+.seccion1__logo{
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.nav__img{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+
+
+.cerrar{
+    transform: scale(0);
+}
+
+
+.seccion1__nav:target .abrir{
+transform: scale(0);
+}
+
+.seccion1__nav:target .cerrar{
+    transform: scale(1);
+}  
+
+
+
+
+
+.nav__ul{
+    position: absolute;
+    transition: all 0.4s;
+    top: 0;
+    right: -100%;
+    background-color: var(--White);
+    width: 100%;
+    height: 95px;
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5em;
+    padding-right: 1.4rem;
+}
+
+
+
+.nav__link{
+    text-decoration: none;
+    color: var(--Black);
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+
+
+.nav__link:hover{
+    text-decoration: underline;
+}
+
+.seccion1__nav:target .nav__ul{
+    right: 0;
+}
+
+
+.seccion2{
+    grid-area: segunda;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion2,.seccion4{
+    padding: 3em 2em;
+}
+
+
+
+.seccion2__titulo{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  
+}
+
+
+.seccion2__parrafo{
+    color:var(--Dark-Gray);
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+}
+
+
+.seccion2__link{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-decoration: none;
+    color: var(--Black);
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+
+
+.seccion4{
+    grid-area: cuarta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion4__titulo{
+    text-transform: uppercase;
+    color: var(--Black);
+    letter-spacing: 5px;
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+.seccion4__parrafo{
+    color:var(--Dark-Gray);
+    line-height: 1.3;
+
+}
+
+.seccion5{
+    min-height: 270px;
+    background-image: url(../images14/image-about-light.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: quinta;
+}
+
+.seccion3{
+    min-height: 270px;
+    background-image: url(../images14/image-about-dark.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: tercera;
+}
+
+.imagenes__contenedor{
+    background-color: var(--Black);
+    width: 130px;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: primera;
+    z-index: 4;
+    justify-self:end ;
+    align-self: end;
+}
+
+
+
+.contenedor__img{
+    cursor: pointer;
+}
+
+
+
+
+@media(min-width:820px){
+
+
+
+
+    
+    .contenedor{
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas:"primera primera primera primera segunda segunda segunda" 
+                            "primera primera primera primera segunda segunda segunda"
+                            "primera primera primera primera segunda segunda segunda"
+                            "primera primera primera primera segunda segunda segunda"
+                            "tercera tercera cuarta cuarta cuarta quinta quinta"
+                            "tercera tercera cuarta cuarta cuarta quinta quinta";
+    }
+
+
+    
+    .seccion1__logo{
+        margin: 0 3rem;
+    }
+
+
+    .seccion1{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-image: url(../images14/desktop-image-hero-1.jpg);
+        padding: 4rem 0;
+    }
+
+    
+    
+
+
+
+    .nav__img{
+        display: none;
+    }
+
+    
+    .nav__ul{
+        position: static;
+        background-color: transparent;
+        width: unset;
+        height: unset;
+        padding: 0;
+        gap: 2em;
+
+    }
+
+
+    
+    .nav__link{
+        color: var(--White);
+        font-weight: unset;
+    }
+
+
+
+    
+    .imagenes__contenedor{
+        grid-area: segunda;
+        justify-self: start;
+    }
+
+}
+
+
+
