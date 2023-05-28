@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(fuentes/roboto/robotoFlex.ttf);
+}
+body{
+    font-family: Roboto;
+}
+.contenedor{
+    width: clamp(320px,80vw,1170px);
+    margin: 1em auto;
+}
+.cabecera{
+    background-image: url(cabecerafondotel.png);
+    background-size: cover;
+    background-position: center;
+    padding:1.8em;
+}
+.cabecera__img{
+    width: clamp(110px,8vw,250px);
+    margin: 4em auto;
+    display: block;
+}
+.cabecera__titulo{
+    font-size: clamp(1.7rem,2.6vw,2.6rem);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.cabecera__parrafo{
+    font-size: clamp(1.3rem,1.4vw,1.7rem);
+    text-align: center;
+    hyphens: auto;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+.link-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.link{
+   
+    font-size: clamp(1.1rem,1.4vw,1.5rem);
+    text-decoration: none;
+    text-align: center;
+    
+    border-radius: 2em;
+    padding: 0.8em;
+    color: white;
+    letter-spacing: 1px;
+}
+.link1{
+    background-color: rgba(0, 139, 139, 0.719);
+    box-shadow: 2px 2px darkcyan;
+}
+.link2{
+    background-color: rgba(71, 61, 139, 0.719);
+    box-shadow: 2px 2px darkslateblue;
+}
+.articulo1{
+    padding: 1em;
+    margin-top: 4rem;
+}
+.articulo__subtitulo{
+    text-align: center;
+    font-size: clamp(1.6rem,2.5vw,2.5rem);
+    margin-bottom: 1rem;
+
+}
+.articulo__parrafo{
+    text-align: center;
+    font-size: clamp(1.2rem,1.3vw,1.6rem);
+    margin-bottom: 3rem;
+}
+.articulo1__img{
+    width: clamp(270px,50vw,1900px);
+}
+.articulo1__contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.articulo__informacion{
+    text-align: center;
+}
+.informacion__item{
+    margin-bottom: 2rem;
+}
+.informacion__subtitulo{
+    font-size: clamp(1.2rem,1.8vw,1.8rem);
+    margin-bottom: 0.5rem;
+}
+.informacion__parrafo{
+    font-size: clamp(1.1rem,1.2vw,1.5rem);
+}
+.articulo2{
+    padding: 1em;
+    margin-top: 4rem;
+}
+.articulo2__img{
+    width: clamp(270px,50vw,1900px);
+    margin: 0 auto;
+    display: block;
+}
+.articulo3{
+    padding: 1em;
+    margin: 4rem 0;
+}
+.articulo3__contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-bottom: 5rem;
+}
+.articulo3__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    justify-content:flex-start;
+    text-align: center;
+}
+.articulo3__img{
+    margin-bottom: 1.5rem;
+}
+
+.articulo3__subtitulo{
+    font-size: clamp(1.3rem,1.8vw,1.4rem);
+}
+.articulo3__parrafo{
+    font-size: clamp(1rem,1.3vw,1.4rem);
+    
+}
+.articulo3__contenedor2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5em;
+}
+.articulo3__img2{
+    width: clamp(120px,10vw,300px);
+}
+.articulo4{
+    padding: 1em;
+}
+.pie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    background-color: rgba(211, 211, 211, 0.534);
+    padding: 3em;
+    margin-top: 5rem;
+}
+.pie__img{
+    width: clamp(60px,8vw,70px);
+}
+.pie__parrafo{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem,1.4vw,1.5rem);
+}
+.pie__contenedor-img{
+    display: flex;
+    gap: 2.5em;
+}
+@media(min-width:540px){
+    .link-container{
+        flex-direction: row;
+        gap: 0.8em;
+        justify-content: center;
+    }
+}
+@media(min-width:1024px){
+    .articulo1__contenedor{
+        flex-direction: row;
+        gap: 4em;
+    }
+    .articulo__informacion{
+        text-align: left;
+    }
+    .articulo3__contenedor{
+        flex-direction: row;
+    }
+    .articulo3__item{
+        width: calc((100% - 5em)/3);
+    }
+    .articulo3__contenedor2{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .pie{
+        flex-direction: row;
+        justify-content: center;
+        padding: 2em ;
+        margin-top: 7rem;
+    }
+    .pie__contenedor{
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+    .pie__parrafo{
+        margin-bottom: 0;
+        width: calc((100% - 2em)/3);
+        text-align: left;
+    }
+    .articulo3__contenedor{
+        margin-bottom: 8rem;
+    }
+    .articulo4{
+        margin-top: 7rem;
+    }
+    .cabecera{
+        background-image: url(cabecerafondoescritorio.png);
+    }
+}
+@media(min-width:1280px){
+    .pie__contenedor-img{
+        margin-left: auto;
+    }
+    .pie{
+        gap: 6em;
+        padding: 2em 5em;
+    }
+    .articulo3__contenedor2{
+        justify-content: space-between;
+    }
+    
+}
